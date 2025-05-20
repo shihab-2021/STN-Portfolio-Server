@@ -12,7 +12,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://autoluxe-pink.vercel.app"],
+    origin: [
+      "http://localhost:3000",
+      "https://shihab-portfolio-dashboard.vercel.app",
+      "https://shajibul-alam-shihab-portfolio.vercel.app",
+    ],
     credentials: true,
   }),
 );
