@@ -24,7 +24,7 @@ const deleteSkill = catchAsync(async (req, res) => {
 });
 
 const getAllSkills = catchAsync(async (req, res) => {
-  const result = await skillServices.getAllSkills(req.query);
+  const result = await skillServices.getAllSkills();
   sendResponse(res, {
     status: true,
     statusCode: StatusCodes.OK,

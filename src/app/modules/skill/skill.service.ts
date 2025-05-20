@@ -30,14 +30,8 @@ const deleteSkill = async (id: string) => {
   return updateIsDelete;
 };
 
-const getAllSkills = async (query: Record<string, unknown>) => {
-  const searchableFields = ["name"];
-  const skills = new QueryBuilder(Skill.find(), query)
-    .search(searchableFields)
-    .sort()
-    .filter();
-
-  const result = await skills.modelQuery;
+const getAllSkills = async () => {
+  const result = await Skill.find();
   return result;
 };
 
